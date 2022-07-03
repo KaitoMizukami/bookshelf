@@ -10,3 +10,6 @@ class Book(models.Model):
         max_length=100,
         choices=CATEGORY
     )
+
+    def __str__(self):
+        return self.title
