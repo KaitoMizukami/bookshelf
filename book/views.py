@@ -15,3 +15,4 @@ class DetailBookView(DetailView):
 class CreateBookView(CreateView):
     template_name = 'book/book_create.html'
     model = Book
+    fields = ('title', 'text', 'category')
