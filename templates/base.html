@@ -11,7 +11,15 @@
     <title>{% block title %}{% endblock title %} | 本棚アプリ</title>
   </head>
   <body>
-    {% block content %}
-    {% endblock content%}
+    <nav class="navbar navbar-dark bg-success sticky-top">
+      <div class="navbar-nav d-flex flex-row">
+        <a href="{% url 'list-book' %}" class="nav-link mx-3">書籍一覧</a>
+        <a href="{% url 'create-book' %}" class="nav-link mx-3">書籍登録</a>
+      </div>
+    </nav>
+    <div class="p-4">
+      <h1>{% block h1%}{% endblock %}</h1>
+    </div>
+    {% block content %}{% endblock content%}
   </body>
 </html>
